@@ -14,6 +14,11 @@ public class PrimeNum {
 			
 			for(int j = 0; j <= primesList.size() - 1; j++)
 			{
+				if(primesList.get(j) > Math.sqrt(i))
+				{
+					break;
+				}
+				
 				if(i % primesList.get(j) == 0)
 				{
 					add = false; 
@@ -33,5 +38,7 @@ public class PrimeNum {
 		{
 			System.out.println(primesList.get(i));
 		}
+	System.out.println("There are " + primesList.size());
 	}
+	
 }
